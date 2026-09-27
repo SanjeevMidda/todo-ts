@@ -8,6 +8,7 @@ import toggleTodo from "./utilities/toggleTodo";
 
 function App() {
   const [todos, setTodos] = useState<Task[]>(initialTodos);
+  const [newTask, setNewTask] = useState("");
 
   const deleteTodo = (taskID: number) => {
     const updatedTodos = removeTodo({ taskID, todos });
@@ -33,6 +34,11 @@ function App() {
           />
         );
       })}
+
+      <div className="inputContainer">
+        <input type="text" onChange={(e) => setNewTask(e.target.value)} />
+        <button>ADD</button>
+      </div>
     </div>
   );
 }
