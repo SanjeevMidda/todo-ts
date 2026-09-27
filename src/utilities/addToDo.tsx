@@ -6,8 +6,6 @@ type addToDoProps = {
 };
 
 const addToDo = ({ newTask, todos }: addToDoProps) => {
-  if (newTask.trim()) return;
-
   const todoToAdd = {
     id: todos.length + 1,
     name: newTask,

@@ -22,6 +22,10 @@ function App() {
   };
 
   const addNewTodoItem = () => {
+    const task = newTask.trim();
+
+    if (!task) return;
+
     const itemAdded = addToDo({ newTask, todos });
     setTodos(itemAdded);
     setNewTask("");
