@@ -13,19 +13,21 @@ function App() {
     setTodos(updatedTodos);
   };
 
-  <div className="App">
-    {todos.map((item) => {
-      return (
-        <TaskComponent
-          key={item.id}
-          taskID={item.id}
-          taskName={item.name}
-          taskStatus={item.status}
-          deleteTask={deleteTodo}
-        />
-      );
-    })}
-  </div>;
+  return (
+    <div className="App">
+      {todos.map((item) => {
+        return (
+          <TaskComponent
+            key={item.id}
+            taskID={item.id}
+            taskName={item.name}
+            taskStatus={item.status}
+            deleteTask={deleteTodo}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default App;
