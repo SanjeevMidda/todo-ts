@@ -1,4 +1,4 @@
-import { Task } from "./types/Todo";
+import { Task } from "../types/Todo";
 
 type addToDoProps = {
   newTask: string;

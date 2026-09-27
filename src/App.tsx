@@ -5,7 +5,7 @@ import { todos as initialTodos } from "./data/todoTasks";
 import { useState } from "react";
 import removeTodo from "./utilities/removeTodo";
 import toggleTodo from "./utilities/toggleTodo";
-import addToDo from "./addToDo";
+import addToDo from "./utilities/addToDo";
 
 function App() {
   const [todos, setTodos] = useState<Task[]>(initialTodos);
