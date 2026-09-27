@@ -24,6 +24,7 @@ function App() {
   const addNewTodoItem = () => {
     const itemAdded = addToDo({ newTask, todos });
     setTodos(itemAdded);
+    setNewTask("");
   };
 
   return (
@@ -42,7 +43,11 @@ function App() {
       })}
 
       <div className="inputContainer">
-        <input type="text" onChange={(e) => setNewTask(e.target.value)} />
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+        />
         <button onClick={addNewTodoItem}>ADD</button>
       </div>
     </div>
