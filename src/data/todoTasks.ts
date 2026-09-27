@@ -7,7 +7,7 @@ export const todos = [
   {
     id: 1,
     name: "Go for a run",
-    status: true,
+    status: false,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const todos = [
   {
     id: 3,
     name: "Reply to emails",
-    status: true,
+    status: false,
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const todos = [
   {
     id: 6,
     name: "Prepare dinner",
-    status: true,
+    status: false,
   },
   {
     id: 7,
@@ -47,6 +47,6 @@ export const todos = [
   {
     id: 9,
     name: "Plan tomorrow",
-    status: true,
+    status: false,
   },
 ];
