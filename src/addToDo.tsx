@@ -1,18 +1,18 @@
 import { Task } from "./types/Todo";
 
 type addToDoProps = {
-  newTodo: string;
+  newTask: string;
   todos: Task[];
 };
 
-const addToDo = ({ newTodo, todos }: addToDoProps) => {
+const addToDo = ({ newTask, todos }: addToDoProps) => {
   const todoToAdd = {
     id: todos.length + 1,
-    name: newTodo,
+    name: newTask,
     status: false,
   };
 
-  return todoToAdd;
+  return [...todos, todoToAdd];
 };
 
 export default addToDo;

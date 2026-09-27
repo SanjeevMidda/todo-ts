@@ -5,6 +5,7 @@ import { todos as initialTodos } from "./data/todoTasks";
 import { useState } from "react";
 import removeTodo from "./utilities/removeTodo";
 import toggleTodo from "./utilities/toggleTodo";
+import addToDo from "./addToDo";
 
 function App() {
   const [todos, setTodos] = useState<Task[]>(initialTodos);
@@ -18,6 +19,11 @@ function App() {
   const toggleTodoStatus = (taskID: number) => {
     const updatedTodos = toggleTodo({ taskID, todos });
     setTodos(updatedTodos);
+  };
+
+  const addNewTodoItem = () => {
+    const itemAdded = addToDo({ newTask, todos });
+    setTodos(itemAdded);
   };
 
   return (
@@ -37,7 +43,7 @@ function App() {
 
       <div className="inputContainer">
         <input type="text" onChange={(e) => setNewTask(e.target.value)} />
-        <button>ADD</button>
+        <button onClick={addNewTodoItem}>ADD</button>
       </div>
     </div>
   );
